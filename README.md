@@ -58,3 +58,8 @@ git push origin <nome-da-branch>
 
 Leia mais sobre pull requests nas [páginas de ajuda do GitHub](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 - Agora, aguarde até *revisão do seu Pull Request*! Se houver conflitos, você receberá uma notificação.
+
+# Referências:
+
+- [Documentação do Pygame](https://pyga.me/docs/)
+
