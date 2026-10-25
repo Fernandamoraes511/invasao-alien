@@ -1,0 +1,47 @@
+# Python Journey - Chapter 32
+# Settings for Alien Invasion game
+
+class Settings:
+    """A class to store all settings for Alien Invasion."""
+
+    def __init__(self):
+        """Initialize the game's settings."""
+        # Screen settings
+        self.screen_width = 1080
+        self.screen_height = 600
+        self.bg_color = (230, 230, 230)
+
+        # Ship settings
+        self.ship_limit = 3
+
+        # Bullet settings
+        self.bullet_width = 3
+        self.bullet_height = 15
+        self.bullet_color = (255, 234, 136)
+        self.bullets_allowed = 5
+
+        # Alien settings
+        self.fleet_drop_speed = 20
+
+        # How quickly the game speeds up
+        self.speedup_scale = 1.2
+        self.initialize_dynamic_settings()
+        # How quickly the alien point values increase
+        self.score_scale = 1.5
+
+        # Scoring
+        self.alien_points = 50
+    def initialize_dynamic_settings(self):
+        """Initialize settings that change throughout the game."""
+        self.ship_speed_factor = 2
+        self.bullet_speed_factor = 3
+        self.alien_speed_factor = 1.7
+
+        # fleet_direction of 1 represents right; -1 represents left.
+        self.fleet_direction = 1
+    def inscrease_speed(self):
+        """Increase speed settings and alien point values."""
+        self.ship_speed_factor *= self.speedup_scale
+        self.bullet_speed_factor *= self.speedup_scale
+        self.alien_speed_factor *= self.speedup_scale
+        self.alien_points = int(self.alien_points * self.score_scale)
